@@ -1,5 +1,3 @@
-import projects from './assets/projects.json' assert { type: 'json' };
-
 window.addEventListener('DOMContentLoaded', event => {
 
     // Activate Bootstrap scrollspy on the main nav element
@@ -24,8 +22,34 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    let scrollToTopVisible = false;
+    // Scroll to top button appear
+    document.addEventListener('scroll', () => {
+        const scrollToTop = document.body.querySelector('.scroll-to-top');
+        if (document.documentElement.scrollTop > 100) {
+            if (!scrollToTopVisible) {
+                fadeIn(scrollToTop);
+                scrollToTopVisible = true;
+            }
+        } else {
+            if (scrollToTopVisible) {
+                fadeOut(scrollToTop);
+                scrollToTopVisible = false;
+            }
+        }
+    })
+
     // Append the projects to the project section
     projectDetailsLink = 'details#'
+
+    projects = [
+        {
+            "name": "Vicenna - HealthCloud",
+            "company": "Techlogix", 
+            "year": "August 2017 - June 2018", 
+            "details": "healthcloud"
+        }
+    ]
 
     container = document.body.querySelector('#projectsContainer');
     projects.forEach(element => {
@@ -40,3 +64,27 @@ window.addEventListener('DOMContentLoaded', event => {
     }); 
 
 });
+
+
+function fadeOut(el) {
+    el.style.opacity = 1;
+    (function fade() {
+        if ((el.style.opacity -= .1) < 0) {
+            el.style.display = "none";
+        } else {
+            requestAnimationFrame(fade);
+        }
+    })();
+};
+
+function fadeIn(el, display) {
+    el.style.opacity = 0;
+    el.style.display = display || "block";
+    (function fade() {
+        var val = parseFloat(el.style.opacity);
+        if (!((val += .1) > 1)) {
+            el.style.opacity = val;
+            requestAnimationFrame(fade);
+        }
+    })();
+};
