@@ -109,7 +109,7 @@ window.addEventListener('DOMContentLoaded', event => {
             "name": "HealthCare IoT",
             "company": "Nextbridge", 
             "year": "Oct 2018 - Dec 2018", 
-            "details": "ioy"
+            "details": "iot"
         },
         {
             "name": "Vicenna - HealthCloud",
