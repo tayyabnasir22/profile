@@ -50,7 +50,7 @@
   --bs-danger-rgb: 220, 53, 69;
   --bs-light-rgb: 248, 249, 250;
   --bs-dark-rgb: 33, 37, 41;
-  --bs-white-rgb: 255, 255, 255;
+  --bs-white-rgb: 223, 222, 202;
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
@@ -10831,8 +10831,8 @@ html {
 }
 
 .content-section {
-  padding-top: 7.5rem;
-  padding-bottom: 7.5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .content-section-heading h2, .content-section-heading .h2 {
@@ -10970,6 +10970,22 @@ footer.footer .social-link:hover {
     -webkit-clip-path: inset(2rem);
             clip-path: inset(2rem);
   }
+}
+
+.role-item {
+  background: var(--bs-primary);
+  transition: background-color 1s ease-out 50ms
+}
+.role-item:hover {
+  background-color: var(--bs-dark);
+}
+
+.role-item-inv {
+  background: var(--bs-dark);
+  transition: background-color 1s ease-out 50ms
+}
+.role-item-inv:hover {
+  background-color: var(--bs-primary);
 }
 
 .service-icon {

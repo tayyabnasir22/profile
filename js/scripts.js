@@ -22,38 +22,136 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
-    let scrollToTopVisible = false;
-    // Scroll to top button appear
-    document.addEventListener('scroll', () => {
-        const scrollToTop = document.body.querySelector('.scroll-to-top');
-        if (document.documentElement.scrollTop > 100) {
-            if (!scrollToTopVisible) {
-                fadeIn(scrollToTop);
-                scrollToTopVisible = true;
-            }
-        } else {
-            if (scrollToTopVisible) {
-                fadeOut(scrollToTop);
-                scrollToTopVisible = false;
-            }
-        }
-    })
 
     // Append the projects to the project section
     projectDetailsLink = 'details#'
 
     projects = [
         {
+            "name": "Type 2 Diabetes Prediction Using Routine EHR Data",
+            "company": "CureMD", 
+            "year": "Jul 2021 - Jan 2023", 
+            "details": "diabetes"
+        },
+        {
+            "name": "Face ID Patient Tracking",
+            "company": "CureMD", 
+            "year": "Oct 2021 - Jan 2023", 
+            "details": "face"
+        },
+        {
+            "name": "Smart Recruit",
+            "company": "CureMD", 
+            "year": "Jan 2022 - Feb 2023", 
+            "details": "smart"
+        },
+        {
+            "name": "MD – Appointment Scheduling",
+            "company": "CureMD", 
+            "year": "Aug 2021 - May 2022", 
+            "details": "appointment"
+        },
+        {
+            "name": "Common Black College Application",
+            "company": "Toptal", 
+            "year": "Jun 2023 - Present", 
+            "details": "college"
+        },
+        {
+            "name": "MD – Clinical Assistance Recommendation System",
+            "company": "CureMD", 
+            "year": "May 2021 - Jan 2022", 
+            "details": "clinical"
+        },
+        {
+            "name": "MD – Medication Sig Recommendation System",
+            "company": "CureMD", 
+            "year": "Feb 2021 - Dec 2021", 
+            "details": "sig"
+        },
+        {
+            "name": "MD – Billing Form Data Migration",
+            "company": "CureMD", 
+            "year": "Oct 2020 - Mar 2021", 
+            "details": "form"
+        },
+        {
+            "name": "MD – Intelligent Customer Service Quality Control",
+            "company": "CureMD", 
+            "year": "Oct 2021 - Jan 2021", 
+            "details": "support"
+        },
+        {
+            "name": "NOVATRAQ",
+            "company": "Nextbridge", 
+            "year": "Sep 2019 - Oct 2020", 
+            "details": "nova"
+        },
+        {
+            "name": "FUNDINGTRAQ",
+            "company": "Nextbridge", 
+            "year": "Sep 2019 - Oct 2020", 
+            "details": "fund"
+        },
+        {
+            "name": "Self-Service Terminal",
+            "company": "Nextbridge", 
+            "year": "Mar 2019 - Sep 2019", 
+            "details": "self"
+        },
+        {
+            "name": "NextHRM",
+            "company": "Nextbridge", 
+            "year": "Jan 2019 - Jul 2019", 
+            "details": "hrm"
+        },
+        {
+            "name": "HealthCare IoT",
+            "company": "Nextbridge", 
+            "year": "Oct 2018 - Dec 2018", 
+            "details": "ioy"
+        },
+        {
             "name": "Vicenna - HealthCloud",
             "company": "Techlogix", 
-            "year": "August 2017 - June 2018", 
-            "details": "healthcloud"
-        }
+            "year": "Aug 2017 - May 2018", 
+            "details": "health"
+        },
+        {
+            "name": "Pharmacist.com.pk",
+            "company": "Artificial Intelligence and Multidisciplinary (AIM) Research Laboratory", 
+            "year": "Jun 2016 - Jul 2017", 
+            "details": "pharma"
+        },
+        {
+            "name": "Efficient CRNN: A Novel Approach for Low Resource Urdu Text Recognition",
+            "company": "Independent Research", 
+            "year": "December 2021 - Jun 2023", 
+            "details": "crnn"
+        },
+        {
+            "name": "MMU-OCR-20",
+            "company": "M.Phils Thesis", 
+            "year": "September 2019 - Jul 2020", 
+            "details": "mmu"
+        },
+        {
+            "name": "Bird Species Classifier",
+            "company": "Freelance", 
+            "year": "Jan 2019 - Jul 2019", 
+            "details": "bird"
+        },
+        {
+            "name": "KendoGridFASMS (Kendo-Grid-Filtering-Aggregation-Sorting-Mapping-Server)",
+            "company": "Open Source", 
+            "year": "Nov 2019 - Present", 
+            "details": "fasms"
+        },
     ]
 
     container = document.body.querySelector('#projectsContainer');
     projects.forEach(element => {
-        sourceHTML = `<div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+        sourceHTML = `<div class="d-flex flex-column flex-md-row justify-content-between mb-2">
                         <div class="flex-grow-1">
                             <h3 class="mb-0"><a href="${projectDetailsLink + element.details}">${element.name}</a></h3>
                             <div class="subheading mb-3">${element.company}</div>
@@ -65,26 +163,3 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-
-function fadeOut(el) {
-    el.style.opacity = 1;
-    (function fade() {
-        if ((el.style.opacity -= .1) < 0) {
-            el.style.display = "none";
-        } else {
-            requestAnimationFrame(fade);
-        }
-    })();
-};
-
-function fadeIn(el, display) {
-    el.style.opacity = 0;
-    el.style.display = display || "block";
-    (function fade() {
-        var val = parseFloat(el.style.opacity);
-        if (!((val += .1) > 1)) {
-            el.style.opacity = val;
-            requestAnimationFrame(fade);
-        }
-    })();
-};
