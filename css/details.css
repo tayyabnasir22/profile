@@ -10934,8 +10934,36 @@ footer.footer .social-link:hover {
 }
 .portfolio-item .caption .caption-content p {
   font-weight: 300;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
+
+@media only screen and (max-width : 480px) {
+    /* Styles */
+    .caption-content p{
+      font-size: 0.6rem!important;
+    }
+    .content-section-heading h2{
+      font-size: 1.5rem!important;
+    }
+    .btn-group a{
+      font-size: x-small;
+    }
+}
+
+@media only screen and (max-width : 280px) {
+  /* Styles */
+  .caption-content p{
+    font-size: xx-small!important;
+  }
+  .content-section-heading h2{
+    font-size: 1.5rem!important;
+  }
+  
+  .btn-group a{
+    font-size: xx-small;
+  }
+}
+
 @media (min-width: 992px) {
   .portfolio-item {
     max-width: none;
