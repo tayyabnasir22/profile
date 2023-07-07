@@ -10869,6 +10869,14 @@ p.lead {
   outline-color: #d48a6e;
 }
 
+@media only screen and (max-width : 480px) {
+  /* Styles */
+  
+  p.lead{
+    font-size: small;
+  }
+}
+
 @media (min-width: 992px) {
   #sideNav {
     padding-left: 0;

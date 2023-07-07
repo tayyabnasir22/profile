@@ -10962,6 +10962,11 @@ footer.footer .social-link:hover {
   .btn-group a{
     font-size: xx-small;
   }
+  .content-section button{
+    font-size: small;
+    min-width: auto;
+    padding: 20px;
+  }
 }
 
 @media (min-width: 992px) {
