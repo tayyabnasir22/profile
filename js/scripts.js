@@ -108,7 +108,7 @@ window.addEventListener('DOMContentLoaded', event => {
         {
             "name": "Common Black College Application",
             "company": "Toptal", 
-            "year": "Jun 2023 - Present", 
+            "year": "Jun 2023 - Sep 2023", 
             "details": "college"
         },
         {
