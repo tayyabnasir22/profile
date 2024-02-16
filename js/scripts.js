@@ -28,6 +28,60 @@ window.addEventListener('DOMContentLoaded', event => {
 
     projects = [
         {
+            "name": "Ask My AI",
+            "company": "Arbisoft", 
+            "year": "Mar 2023 - Oct 2023", 
+            "details": "askmyai"
+        },
+        {
+            "name": "Reki Movie Recommendations",
+            "company": "Arbisoft", 
+            "year": "Aug 2023 - Oct 2023", 
+            "details": "reki"
+        },
+        {
+            "name": "Outset Style",
+            "company": "Toptal", 
+            "year": "Sep 2023 - Feb 2024", 
+            "details": "outset"
+        },
+        {
+            "name": "CodeKer - Arbisoft",
+            "company": "Arbisoft", 
+            "year": "Jul 2023 - Feb 2024", 
+            "details": "codeker"
+        },
+        {
+            "name": "Menus Recipe - Burger Index",
+            "company": "Arbisoft", 
+            "year": "Jan 2024 - Present", 
+            "details": "menu"
+        },
+        {
+            "name": "Call-Analyzer Bearsight.io",
+            "company": "Toptal", 
+            "year": "Aug 2023 - Jan 2024", 
+            "details": "callanalyzer"
+        },
+        {
+            "name": "Store Matching - Burger Index",
+            "company": "Arbisoft", 
+            "year": "December 2023 - Present", 
+            "details": "storematching"
+        },
+        {
+            "name": "Product Matching - Burger Index",
+            "company": "Arbisoft", 
+            "year": "Jan 2024 - Present", 
+            "details": "productmatching"
+        },
+        {
+            "name": "Retail Products Extraction – Burger Index",
+            "company": "Arbisoft", 
+            "year": "September 2023 - Jan 2024", 
+            "details": "productextraction"
+        },
+        {
             "name": "Type 2 Diabetes Prediction Using Routine EHR Data",
             "company": "CureMD", 
             "year": "Jul 2021 - Jan 2023", 
@@ -126,7 +180,7 @@ window.addEventListener('DOMContentLoaded', event => {
         {
             "name": "Efficient CRNN: A Novel Approach for Low Resource Urdu Text Recognition",
             "company": "Independent Research", 
-            "year": "December 2021 - Jun 2023", 
+            "year": "December 2021 - December 2023", 
             "details": "crnn"
         },
         {
